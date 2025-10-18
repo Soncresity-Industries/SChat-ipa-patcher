@@ -1,4 +1,4 @@
-module pyoncord/patcher
+module soncresity-industries/patcher
 
 go 1.20
 

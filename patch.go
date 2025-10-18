@@ -19,7 +19,7 @@ func PatchDiscord(discordPath *string, iconsPath *string) {
 
 	extractDiscord(discordPath)
 
-	log.Println("Renaming Discord to Bunny")
+	log.Println("Renaming Discord to SChat")
 	if err := patchName(); err != nil {
 		log.Fatalln(err)
 	}
@@ -167,8 +167,8 @@ func patchName() error {
 		return err
 	}
 
-	info["CFBundleName"] = "Bunny"
-	info["CFBundleDisplayName"] = "Bunny"
+	info["CFBundleName"] = "SChat"
+	info["CFBundleDisplayName"] = "SChat"
 
 	err = savePlist(&info)
 	return err
@@ -195,12 +195,12 @@ func patchIcon() error {
 	}
 
 	icons := info["CFBundleIcons"].(map[string]interface{})["CFBundlePrimaryIcon"].(map[string]interface{})
-	icons["CFBundleIconName"] = "PyoncordIcon"
-	icons["CFBundleIconFiles"] = []string{"PyoncordIcon60x60"}
+	icons["CFBundleIconName"] = "SChatIcon"
+	icons["CFBundleIconFiles"] = []string{"SChatIcon60x60"}
 
 	icons = info["CFBundleIcons~ipad"].(map[string]interface{})["CFBundlePrimaryIcon"].(map[string]interface{})
-	icons["CFBundleIconName"] = "PyoncordIcon"
-	icons["CFBundleIconFiles"] = []string{"PyoncordIcon60x60", "PyoncordIcon76x76"}
+	icons["CFBundleIconName"] = "SChatIcon"
+	icons["CFBundleIconFiles"] = []string{"SChatIcon60x60", "SChatIcon76x76"}
 
 	err = savePlist(&info)
 	return err
