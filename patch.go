@@ -187,7 +187,7 @@ func patchDevices() error {
 	return err
 }
 
-// Patch the Discord icon to use Pyoncord's icon
+// Patch the Discord icon to use SChat's icon
 func patchIcon() error {
 	info, err := loadPlist()
 	if err != nil {
@@ -206,7 +206,7 @@ func patchIcon() error {
 	return err
 }
 
-// Show Pyoncord's document folder in Files app and iTunes/Finder
+// Show SChat's document folder in Files app and iTunes/Finder
 func patchiTunesAndFiles() error {
 	info, err := loadPlist()
 	if err != nil {

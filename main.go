@@ -21,7 +21,7 @@ func init() {
 
 func main() {
 	log.SetFlags(log.Flags() &^ (log.Ldate | log.Ltime))
-	log.SetPrefix("\x1b[32m[PyonPatcher]\x1b[0m ")
+	log.SetPrefix("\x1b[32m[SChatPatcher]\x1b[0m ")
 
 	PatchDiscord(&ipaFile, &iconsFile)
 }

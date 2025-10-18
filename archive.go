@@ -28,7 +28,7 @@ func extractDiscord(discordPath *string) {
 	}
 }
 
-// Extract Pyoncord's icons
+// Extract SChat's icons
 func extractIcons(iconsPath *string) {
 	log.Println("Extracting", *iconsPath)
 
